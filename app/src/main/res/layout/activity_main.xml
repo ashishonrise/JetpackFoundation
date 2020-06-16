@@ -16,17 +16,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.MainActivity"
+        tools:showIn="@layout/activity_main">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@{user.name}"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:text="@{user.email}"/>
 
         <Button
@@ -49,6 +52,17 @@
             android:onClick="@{handler.onButtonClick}"
             android:text="@string/button_long_press"
             />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@={user.name}"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@={user.email}"/>
 
     </LinearLayout>
 </layout>
